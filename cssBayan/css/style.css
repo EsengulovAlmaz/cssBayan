@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,500;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background-color: #ECF0F1;
+}
+
+
+header {
+    padding: 1% 0;
+    text-align: center;
+    border-bottom: 0.01em solid black;
+}
+.header_title {
+    font-size: 2em;
+    transition: 0.3s;
+}
+
+
+.accordion {
+    padding-top: 5%;
+}
+.container {
+    max-width: 60%;
+    margin: 0 auto;
+}
+.accordion_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1% 0;
+    transition: 0.3s;
+}
+.accordion_input {
+    width: 0;
+    height: 0;
+    appearance: none;
+}
+.close {
+    display: none;
+}
+.accordion_input:checked ~ .accordion_label .accordion_img {
+    display: block;
+}
+.accordion_input:checked ~ .accordion_label .close {
+    display: black;
+    transition: .3s;
+}
+
+
+.accordion_label {
+    display: block;
+    width: 70%;
+    cursor: pointer;
+}
+.accordion_card_text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.01em solid black;
+    transition: 0.5s;
+}
+.accordion_title {
+    font-size: 2em;
+}
+.material-symbols-outlined {
+    font-size: 1.5em;
+}
+.close {
+    display: none;
+}
+.accordion_img {
+    display: none;
+    text-align: center;
+    width: 100%;
+    transform: scale(0.8);
+    transition: all 1.5s;
+}
+.accordion_img img {
+    width: 100%;
+}
+
+
+
+@media screen and (min-width: 1080px) {
+    .header_title:hover {
+        color: #979A9A ;
+        cursor: pointer;
+    }
+    .accordion_label:hover .accordion_img {
+        display: block;
+        opacity: .6;
+    }
+    .accordion_label:hover .accordion_img {
+        
+    }
+    .accordion_label:hover .accordion_card_text {
+        color: #BDC3C7 ;
+    }
+    .accordion_label:hover .more {
+        display: none;
+    }
+    .accordion_label:hover .close {
+        display: block;
+    }
+    .accordion_card:active {
+        opacity: 0.6;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header_title {
+        font-size: 1.5em;
+    }
+    .accordion_title {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .header_title {
+        font-size: 1em;
+    }
+    .accordion_label {
+        width: 100%;
+    }
+    .material-symbols-outlined {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .header_title {
+        font-size: 1em;
+    }
+    .accordion_label {
+        width: 100%;
+    }
+    .accordion_title {
+        font-size: 0.8em;
+    }
+}
