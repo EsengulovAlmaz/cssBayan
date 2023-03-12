@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,500;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background-color: #ECF0F1;
+}
+
+
+header {
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+.header_title {
+    font-size: 2em;
+}
+
+
+.accordion {
+    padding: 40px 0;
+}
+.container {
+    max-width: 60%;
+    margin: 0 auto;
+}
+.accordion_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+.accordion_input {
+    width: 0;
+    height: 0;
+    appearance: none;
+}
+
+.accordion_input:checked ~ .accordion_label .accordion_img{
+    display: block;
+}
+.accordion_input:checked ~ .accordion_label .close {
+    display: block;
+}
+.accordion_input:checked ~ .accordion_label .more {
+    display: none;
+}
+
+.accordion_label {
+    display: block;
+    width: 70%;
+    cursor: pointer;
+}
+.accordion_card_text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+.accordion_title {
+    font-size: 2em;
+}
+.material-symbols-outlined {
+    font-size: 1.5em;
+}
+.close {
+    display: none;
+}
+.accordion_img {
+    display: none;
+    text-align: center;
+    width: 100%;
+    margin: 10px 0;
+}
+.accordion_img img {
+    width: 90%;
+}
+.accordion_card_text:hover ~ .accordion_img {
+    display: block;
+    transition: 1s;
+}
+
